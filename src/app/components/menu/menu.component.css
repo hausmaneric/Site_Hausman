@@ -1,0 +1,346 @@
+.header {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: transparent;  /* Cor de fundo branca com opacidade */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.main-nav {
+  max-width: 1280px !important;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  position: relative;
+}
+
+.logo {
+  float: left;
+  height: 44px; /* Ajustar conforme necessário */
+  position: absolute;
+  left: 0;
+  top: -6px;
+  cursor: pointer;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  line-height: 1.5; /* Espaçamento entre linhas do menu. Default do site 1 */
+}
+
+.menu-item {
+  position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+  padding: 5px 10px;
+  word-wrap: break-word;
+  transition: background-color 0.3s;
+  cursor: pointer; /* Adiciona o cursor de ponteiro */
+}
+
+.menu-item::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  bottom: -8px;
+  left: -8px;
+  right: -8px;
+  background-color: rgba(255, 255, 255, 0.7); /* Fundo branco com 50% de transparência */
+  border-radius: 50px;
+  transition: opacity 0.3s;
+  opacity: 0;
+  z-index: -1; /* Mantém o pseudo-elemento atrás do texto do menu */
+}
+
+.menu-item:hover::before {
+  opacity: 0.3;
+}
+
+.menu-item:hover > .submenu,
+.submenu-item:hover > .submenu {
+  display: block; /* Exibe o submenu ao passar o mouse sobre o item do menu*/
+}
+
+submenu-item strong{
+  font-weight: 900 !important;
+}
+
+.submenu {
+  /* display: block; */
+  display: none;
+  position: absolute;
+  top: 100%; /* Remover a distância extra */
+  left: 0;
+  background-color: white;
+  /* background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);   */
+  padding: 10px;
+  margin-top: 9px; /* Adiciona uma pequena margem para facilitar o hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona um sombreamento suave */
+  list-style: none;
+  min-width: max-content; /* Ajusta a largura mínima ao conteúdo */
+  border-radius: 6px; /* Adiciona borda arredondada ao submenu */
+  text-align: left; /* Alinha o texto à esquerda */
+  z-index: 1;
+}
+
+.submenu.show {
+  display: block;
+}
+
+/* .submenu .submenu {
+  top: 0;
+  left: 100%;
+  margin-left: 10px;
+} */
+
+.submenu li {
+  margin: 10px 0; /* Aumenta o espaço entre os itens do submenu */
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 10px 6px 10px; /* Adiciona padding aos itens do submenu */
+  cursor: pointer; /* Adiciona o cursor de ponteiro */
+}
+
+.submenu-item {
+  position: relative;
+  padding: 0px; /* Aumenta o padding dos itens do submenu */
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.submenu-item::before {
+  content: "";
+  position: absolute;
+  top: -4px; /* Ajustar para 4px ao invés de 8px */
+  bottom: -4px; /* Ajustar para 4px ao invés de 8px */
+  left: -8px;
+  right: -8px;
+  background-color: rgba(238, 238, 238, 0.5); /* Fundo cinza com 50% de transparência */
+  border-radius: 50px;
+  transition: opacity 0.3s;
+  opacity: 0;
+  z-index: -1; /* Mantém o pseudo-elemento atrás do texto do submenu */
+}
+
+.submenu-item:hover::before {
+  opacity: 1;
+}
+
+.submenu-left{
+  float: left;
+  width: 50%;
+  padding-right: 0.5%;
+  padding-left: 0.5%;
+  height: 100%;
+}
+
+.submenu-right{
+  float: right;
+  width: 50%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  height: 100%;
+}
+
+.submenu-title{
+  background-color: rgba(238, 238, 238, 0.4); /*#3974D7;*/
+  cursor: default !important;
+  border-radius: 50px;
+  font-weight: 700 !important;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+
+.social-icons a {
+  color: white; /* Define a cor preta para os ícones */
+  font-size: 24px; /* Define o tamanho dos ícones */
+}
+
+.social-icons a img{
+  width: 24px;
+  height: 24px;
+}
+
+.header-scrolled {
+  background: linear-gradient(to right, rgba(54, 116, 213, 0.9), rgba(68, 131, 222, 0.9));
+  backdrop-filter: blur(10px);
+}
+
+.header-mobile{
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;  /* Cor de fundo branca com opacidade */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+}
+
+.main-nav-mobile {
+  max-width: 1280px !important;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  position: relative;
+  display: none;
+}
+
+.main-nav-mobile .logo, .menu-mobile .logo {
+  float: left;
+  height: 44px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.header-mobile-button{
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+.header-mobile-button img{
+  width: 24px;
+  height: 24px;
+}
+
+.menu-mobile{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #0070B2;
+}
+
+.menu-mobile-itens{
+  width: 100%;
+  margin-top: 55px;
+  padding: 15px;
+  height: calc(100% - 55px);
+  text-align: left !important;
+}
+
+.menu-mobile-item{
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.menu-mobile-item p{
+  position: relative;
+  font-size: 16px;
+  font-weight: 300;
+  color: white;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  float: left;
+}
+
+.menu-mobile-item i{
+  float: right;
+  color: white;
+}
+
+.menu-mobile-subitem{
+  position: relative;
+  width: 95%;
+  height: auto;
+  margin: 10px;
+  margin-left: 15px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.menu-mobile-subitem p{
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+}
+
+.menu-mobile-subitem p:active{
+  background-color: #f0eded;
+}
+
+.menu-mobile-subitem-segment{
+  position: relative;
+  width: 95%;
+  height: 400px;
+  margin: 10px;
+  margin-left: 15px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.menu-mobile-subitem-segment p{
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+}
+
+.menu-mobile-subitem-segment p:active{
+  background-color: #f0eded;
+}
+
+.menu-mobile-subitem-segment-left{
+  float: left;
+  width: 50%;
+}
+
+.menu-mobile-subitem-segment-right{
+  float: right;
+  width: 50%;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .main-nav {
+    display: none;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .header-mobile{
+    display: block;
+  }
+
+  .main-nav-mobile{
+    display: block;
+  }
+}

@@ -1,0 +1,163 @@
+<header class="header">
+  <nav class="main-nav">
+    <img (click)="setHome()" src="assets/logo_hausman_white.png" alt="Hausman Systems Logo" class="logo">
+    <ul class="menu">
+      <li class="menu-item">
+        Produtos
+          <ul class="submenu">
+            <li class="submenu-item"><strong>Next erp</strong><br>Software de gestão enterpise</li>
+            <li class="submenu-item"><strong>Quartzo</strong><br>Aplicativo mobile de ponto eletrônico</li>
+            <li class="submenu-item"><strong>BuildSyncer</strong><br>Solução completa para gerenciamento de obras</li>
+          </ul>
+      </li>
+      <li class="menu-item">
+        Soluções por Segmento
+        <ul class="submenu">
+          <div class="submenu-left">
+            <li class="submenu-item">Locação de Máquinas, Equipamentos, Veículos e Containers</li>
+            <li class="submenu-item">Construtoras</li>
+            <li class="submenu-item">Montagem de Estuturas e Execução de Projetos</li>
+            <li class="submenu-item">Prestadoras de Serviços</li>
+            <li class="submenu-item">Fábricas</li>
+            <li class="submenu-item">Distribuidores</li>
+            <li class="submenu-item">Redes de Lojas</li>
+            <li class="submenu-item">Licitação Pública</li>
+          </div>
+          <!-- <div class="submenu-separator"></div> -->
+          <div class="submenu-right">
+            <li class="submenu-title">Comércio Varejista</li>
+            <li class="submenu-item">Materiais de Construção</li>
+            <li class="submenu-item">Autopeças</li>
+            <li class="submenu-item">Agropecuárias e Petshops</li>
+            <li class="submenu-item">Farmácias</li>
+            <li class="submenu-item">Roupas, Calçados e Acessórios</li>
+            <li class="submenu-item">Utilidades e Presentes</li>
+            <li class="submenu-item">Supermercados, Padarias e Conveniência</li>
+            <li class="submenu-item">Restaurantes, Bares e Lanchonetes</li>
+            <li class="submenu-item">Oficinas e Autocenters</li>
+          </div>
+        </ul>
+      </li>
+      <li class="menu-item">
+        Treinamentos
+        <ul class="submenu">
+          <li class="submenu-item">Tutoriais</li>
+          <li class="submenu-item">Vídeo Aulas</li>
+          <li class="submenu-item">Dicas</li>
+          <li class="submenu-item">Novidades</li>
+        </ul>
+      </li>
+      <li class="menu-item">
+        Suporte
+        <ul class="submenu">
+          <li class="submenu-item">Central de Suporte Técnico</li>
+          <li class="submenu-item">Downloads</li>
+        </ul>
+      </li>
+      <li class="menu-item">
+        Central do cliente
+      </li>
+    </ul>
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+        <img src="assets/icon_instagram_white.png" alt="">
+      </a>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+        <img src="assets/icon_twiter_white.png" alt="">
+      </a>
+      <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+        <img src="assets/icon_youtube_white.png" alt="">
+      </a>
+    </div>
+  </nav>
+</header>
+
+<header class="header-mobile ">
+  <nav class="main-nav-mobile">
+    <img (click)="setHome()" src="assets/logo_hausman_white.png" alt="Hausman Systems Logo" class="logo">
+    <button (click)="openclosemenu()" class="header-mobile-button">
+      <img src="assets/icon_menu_white.png" alt="">
+    </button>
+    @if(menu){
+      <div class="menu-mobile">
+        <img src="assets/logo_hausman_white.png" alt="Hausman Systems Logo" class="logo">
+        <button (click)="openclosemenu()" class="header-mobile-button">
+          <img src="assets/icon_close.png" alt="">
+        </button>
+        <div class="menu-mobile-itens">
+          <div (click)="visiblePro()" class="menu-mobile-item">
+            <p>Produtos</p><i class="pi pi-arrow-down"></i>
+            <div class="clear"></div>
+          </div>
+          @if(_pro){
+            <div class="menu-mobile-subitem">
+              <p><strong>Next erp</strong><br>Software de gestão enterpise</p>
+              <p><strong>Quartzo</strong><br>Aplicativo mobile de ponto eletrônico</p>
+              <p><strong>BuildSyncer</strong><br>Solução completa para gerenciamento de obras</p>
+            </div>
+          }
+          <div class="clear"></div>
+          <div (click)="visibleSeg()" class="menu-mobile-item">
+            <p>Soluções por Segmento</p><i class="pi pi-arrow-down"></i>
+            <div class="clear"></div>
+          </div>
+          @if(_seg){
+            <div class="menu-mobile-subitem-segment">
+              <div class="menu-mobile-subitem-segment-left">
+                <p>Locação de Máquinas, Equipamentos, Veículos e Containers</p>
+                <p>Construtoras</p>
+                <p>Montagem de Estuturas e Execução de Projetos</p>
+                <p>Prestadoras de Serviços</p>
+                <p>Fábricas</p>
+                <p>Distribuidores</p>
+                <p>Redes de Lojas</p>
+                <p>Licitação Pública</p>
+              </div>
+              <div class="menu-mobile-subitem-segment-right">
+                <p>Comércio Varejista</p>
+                <p>Materiais de Construção</p>
+                <p>Autopeças</p>
+                <p>Agropecuárias e Petshops</p>
+                <p>Farmácias</p>
+                <p>Roupas, Calçados e Acessórios</p>
+                <p>Utilidades e Presentes</p>
+                <p>Supermercados, Padarias e Conveniência</p>
+                <p>Restaurantes, Bares e Lanchonetes</p>
+                <p>Oficinas e Autocenters</p>
+              </div>
+            </div>
+          }
+          <div class="clear"></div>
+          <div (click)="visibleTre()" class="menu-mobile-item">
+            <p>Treinamentos</p><i class="pi pi-arrow-down"></i>
+            <div class="clear"></div>
+          </div>
+          @if(_tre){
+            <div class="menu-mobile-subitem">
+              <p>Tutoriais</p>
+              <p>Vídeo Aulas</p>
+              <p>Dicas</p>
+              <p>Novidades</p>
+            </div>
+          }
+          <div (click)="visibleSup()" class="menu-mobile-item">
+            <p>Suporte</p><i class="pi pi-arrow-down"></i>
+            <div class="clear"></div>
+          </div>
+          @if(_sup){
+            <div class="menu-mobile-subitem">
+              <p>Central de Suporte Técnico</p>
+              <p>Downloads Aulas</p>
+            </div>
+          }
+          <div class="menu-mobile-item">
+            <p>Central do Cliente</p><i class="pi pi-arrow-down"></i>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    }
+  </nav>
+</header>
+
+

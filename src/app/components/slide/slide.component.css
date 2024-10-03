@@ -1,0 +1,28 @@
+
+p-carousel .p-carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+p-carousel .p-carousel-item img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+img{
+  margin: 0 auto;
+  width: 99%;
+  display: block;
+  object-fit: contain;
+  height: calc(100vh - 420px) !important;
+  object-position: center;
+}
+
+@media only screen and (max-width: 768px) {
+  img{
+    height: calc(40vh) !important;
+  }
+}
+

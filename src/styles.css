@@ -1,0 +1,104 @@
+:root {
+  --primary-color: #0070B2;
+  --secondary-color: #6babd1;
+}
+
+@font-face {
+  font-family: 'San Francisco';
+  src: url('/assets/fonts/SF-Pro-Text-Medium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'San Francisco Pro';
+  src: url('/assets/fonts/SF-Pro-Text-Semibold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: white;
+  margin: 0;
+  display: block;
+  height: 100% !important;
+  width: 100% !important;
+  font-family: 'San Francisco', sans-serif;
+  line-height: 1;
+}
+
+p {
+  line-height: 1;
+}
+
+.clear{
+  clear: both;
+}
+
+.p-toast {
+  border-radius: 10px;
+}
+
+.p-toast-message {
+  text-align: center;
+  color: black;
+  padding-top: 8px !important;
+  box-sizing: border-box;
+}
+
+.db{
+  display: none;
+}
+
+.dt{
+  display: none;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .dt{
+    display: block;
+  }
+
+  .dt1, .dt2{
+    display: none !important;
+  }
+
+  .custom-tab-advantage-card .card:first-child{
+    margin-left: 20px !important;
+  }
+
+  .custom-tab-advantage-card .card{
+    margin: 0 !important;
+    width: 90%;
+    padding: 20px;
+    height: 300px !important;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .dn{
+    display: none;
+  }
+
+  .dt{
+    display: none;
+  }
+
+  .db, .dt2{
+    display: block;
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,244 @@
+<!-- Sobre -->
+<p-toast position="bottom-center"  />
+<div #about></div>
+<div class="custom-tab-menu">
+  <div class="custom-tab-menu-item" *ngFor="let item of items; let i = index" [ngClass]="{ 'active': selectedItemIndex === i }" (click)="selectItem(i)">
+    <label>{{item.label}}</label>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="custom-tab">
+  <p>O Next é uma solução especializada que atende às necessidades de diversos segmentos empresariais, proporcionando uma gestão eficiente e integrada.</p>
+  <div class="custom-tab-about">
+    <div class="custom-tab-about-left">
+      <h1>Tem tudo o que <br> sua empresa <br> precisa</h1>
+      <p>São mais de 150 módulos organizados por grupos e setores. Basta expandir um grupo
+        para ver todos módulos que ele possui.</p>
+        <p>Se sua empresa ainda faz controles em Excel, utiliza o Word para montar
+        suas necessidades totalmente.</p>
+        <p>Você não vai precisar mais sair do Next para executar suas tarefas. </p>
+        <div class="content-button">
+          <button (click)="message()" class="content-btn">Confira aqui</button>
+        </div>
+    </div>
+    <div class="custom-tab-about-right-img">
+      <img src="assets/next_mind_full.png" alt="" >
+    </div>
+    <div class="clear"></div>
+    <div class="custom-tab-title">
+      <p>Um sistema ERP completo, integrado e em constante evolução.</p>
+      <p>A escolha ideal para empresas que buscam eficiência, segurança e flexibilidade em sua gestão, proporcionando uma plataforma robusta para alcançar novos patamares de sucesso.</p>
+      <h1>Detalhes que fazem toda <br>
+        diferença</h1>
+    </div>
+    <div class="custom-tab-about-left mt">
+      <h1>Fácil e Intuitivo</h1>
+      <p>Navegue em abas e abra vários módulos ao mesmo tempo. <br> Faça pesquisas rápidas e aplique filtros para obter o que necessita com um clique.</p>
+    </div>
+    <div class="custom-tab-about-right mt">
+      <img src="assets/next_frame_easy.png" alt="" >
+    </div>
+    <div class="clear"></div>
+    <!-- Mobile -->
+    <div class="custom-tab-about-left mt db">
+      <h1>Tudo na Nuvem</h1>
+      <p>Não se preocupe com backup pois está tudo guardado em nossos servidores. Acesse seu sistema de qualquer lugar.</p>
+    </div>
+    <div class="custom-tab-about-right mt db">
+      <img src="assets/next_cloud.png" alt="" >
+    </div>
+    <!-- Desktop -->
+    <div class="custom-tab-about-left mt dn">
+      <img src="assets/next_cloud.png" alt="" >
+    </div>
+    <div class="custom-tab-about-right mt dn">
+      <h1>Tudo na Nuvem</h1>
+      <p>Não se preocupe com backup pois está tudo guardado em nossos servidores. Acesse seu sistema de qualquer lugar.</p>
+    </div>
+    <div class="clear"></div>
+    <!-- Mobile -->
+    <div class="custom-tab-about-left mt db">
+      <h1>Customizável</h1>
+      <p>Não se preocupe se o Next vai atender às suas necessidades pois ele é totalmente customizável e ainda é possível desenvolver módulos exclusivos para sua empresa</p>
+    </div>
+    <div class="custom-tab-about-right mt db">
+      <img src="assets/next_frame_custom.png" alt="" >
+    </div>
+    <!-- Desktop -->
+    <div class="custom-tab-about-left mt dn">
+      <img src="assets/next_frame_custom.png" alt="" >
+    </div>
+    <div class="custom-tab-about-right mt dn">
+      <h1>Customizável</h1>
+      <p>Não se preocupe se o Next vai atender às suas necessidades pois ele é totalmente customizável e ainda é possível desenvolver módulos exclusivos para sua empresa</p>
+    </div>
+    <div class="clear"></div>
+    <div class="custom-tab-about-left mt">
+      <h1>Integração</h1>
+      <p>Tudo aqui funciona de maneira integrada para facilitar o dia a dia dos usuários. <br> O Next Também se integra as contas de e-mail da empresa, plataformas de e-commerce, serviços de mapa e aos aplicativos que extendem as possibilidades.</p>
+    </div>
+    <div class="custom-tab-about-right mt">
+      <img src="assets/next_integration.png" alt="" >
+    </div>
+    <div class="clear"></div>
+    <!-- Sobre -->
+
+    <!-- Especializações -->
+    <div #specialization class="custom-tab-specialization">
+      <div class="custom-tab-menu">
+        <div class="custom-tab-menu-item" *ngFor="let item of items; let i = index" [ngClass]="{ 'active': selectedItemIndex === i }" (click)="selectItem(i)">
+          <label>{{item.label}}</label>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <h1>Para cada segmento, uma solução exclusiva</h1>
+      <div class="custom-tab-specialization-img">
+        <img src="assets/next_omni_segments.png" alt="" >
+      </div>
+      <div class="content-button">
+        <button (click)="message()" class="content-btn">Explore todos os segmentos</button>
+      </div>
+      <div class="clear"></div>
+      <div class="custom-tab-specialization-subtitle">
+        <p>A solução certa para empresas que buscam uma gestão integrada e especializada, adaptável às necessidades específicas de cada segmento, proporcionando eficiência, segurança e crescimento sustentável.</p>
+      </div>
+      <div class="custom-tab-specialization-panel">
+        <div #about class="custom-tab-menu-specialization-">
+          <div class="custom-tab-menu-item-specialization-" *ngFor="let item of tabs; let i = index" [ngClass]="{ 'active': selectedTabIndex === i }" (click)="selectTab(i)">
+            <label>{{item.title}}</label>@if(selectedTabIndex !== i){<i class="pi pi-arrow-down"></i>}
+            @if(selectedTabIndex === i){
+              <p>{{item.label}}</p>
+              <span (click)="message()">Saiba mais <i class="pi pi-arrow-right"></i></span>
+            }
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="content-button">
+          <button (click)="message()" class="content-btn">Conheça todos as soluções e <br> recursos do Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Especializações -->
+
+  <!-- Vantagens -->
+  <div #advantage class="custom-tab-advantage">
+    <div class="custom-tab-menu">
+      <div class="custom-tab-menu-item" *ngFor="let item of items; let i = index" [ngClass]="{ 'active': selectedItemIndex === i }" (click)="selectItem(i)">
+        <label>{{item.label}}</label>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <h1>Você conta com muitas vantagens <br class="dn"> ao adotar a plataforma Next <br class="dn"> para sua empresa</h1>
+    <div class="custom-tab-advantage-left">
+      <div class="custom-timeline" *ngFor="let item of advantages; let i = index">
+        <div class="custom-timeline-circule"></div>
+        <div class="custom-timeline-text">
+          <p>{{item.label}}</p>
+        </div>
+        <div class="clear"></div>
+        <div class="custom-timeline-line"></div>
+      </div>
+    </div>
+    <div class="custom-tab-advantage-right dn">
+      <img src="assets/circle_gradient.png" alt="" >
+    </div>
+    <div class="clear"></div>
+    <div class="custom-tab-advantage-security">
+      <h1>A segurança é uma prioridade <br> fundamental nós</h1>
+      <div class="custom-tab-advantage-left dn">
+        <img src="assets/circle_gradient.png" alt="" >
+      </div>
+      <div class="custom-tab-advantage-right">
+        <div class="custom-timeline" *ngFor="let item of security; let i = index">
+          <div class="custom-timeline-circule"></div>
+          <div class="custom-timeline-text">
+            <p>{{item.label}}</p>
+          </div>
+          <div class="clear"></div>
+          <div class="custom-timeline-line"></div>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+
+    <div class="custom-tab-advantage-title">
+      <div class="custom-tab-advantage-title-img">
+        <h1>Extenda as possibilidades com a <br class="dn"> família de aplicativos do Next</h1>
+      </div>
+      <h1><strong>Quartzo</strong>, <br> a revolução na marcação de Ponto <br class="dn"> integrado ao poder do <strong>Next</strong></h1>
+    </div>
+    <div class="custom-tab-advantage-quartzo">
+      <div class="custom-tab-advantage-left">
+        <p><strong>Quartzo</strong> é um aplicativo inovador projetado para otimizar a marcação de ponto eletrônico e facilitar a comunicação entre colaboradores e o departamento pessoal. </p>
+        <p>Oferece uma solução completa para a gestão de presença e ponto eletrônico nas empresas.</p>
+        <div class="content-button">
+          <button (click)="message()" class="content-btn">Conheça o Quartzo</button>
+        </div>
+      </div>
+      <div class="custom-tab-advantage-right">
+        <img src="assets/quartzo_presentation.png" alt="" >
+      </div>
+    </div>
+    <div class="clear"></div>
+    <!-- Desktop -->
+    <div class="custom-tab-advantage-card dn dt1">
+      <p-carousel [value]="cards" [showIndicators]="false" [numVisible]="3.09" [numScroll]="3"  [circular]="true">
+        <ng-template class="nt" pTemplate="item" let-card>
+          <div class="card">
+            <div class="card-content">
+              <h1>{{ card.title }}</h1>
+              <p>{{ card.label }}</p>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <!-- Tablet -->
+    <div class="custom-tab-advantage-card dt">
+      <p-carousel [value]="cards" [showIndicators]="false" [numVisible]="2" [numScroll]="2"  [circular]="true">
+        <ng-template class="nt" pTemplate="item" let-card>
+          <div class="card">
+            <div class="card-content">
+              <h1>{{ card.title }}</h1>
+              <p>{{ card.label }}</p>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <!-- Mobile -->
+    <div class="custom-tab-advantage-card db dt2">
+      <p-carousel [value]="cards" [showIndicators]="false" [numVisible]="1" [autoplayInterval]="5000" [numScroll]="1"  [circular]="true">
+        <ng-template class="nt" pTemplate="item" let-card>
+          <div class="card">
+            <div class="card-content">
+              <h1>{{ card.title }}</h1>
+              <p>{{ card.label }}</p>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <div class="clear"></div>
+    <div class="custom-tab-advantage-take">
+      <h1><span>Next Take</span><br>
+        Digitalize documentos diretamente no celular</h1>
+
+      <div class="custom-tab-advantage-take-banner">
+        <div class="custom-tab-advantage-take-banner-left">
+          <img class="banner-img" src="assets/take_presentation.png" alt="" >
+        </div>
+        <div class="custom-tab-advantage-take-banner-right">
+          <p>Transforme seu celular em um scanner e digitalize documentos e envie diretamente para o GED do Next.</p>
+          <div class="content-button">
+            <button (click)="message()" class="content-btn">Conheça Gestão Eletrônica de Documentos</button>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Vantagens -->
+</div>
+

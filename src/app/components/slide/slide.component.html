@@ -1,0 +1,14 @@
+<p-carousel
+  #carousel
+  orientation="horizontal"
+  autoplayInterval="5000"
+  [value]="images"
+  [numVisible]="1"
+  [numScroll]="1"
+  [showNavigators]="false"
+  [showIndicators]="true"
+  [indicatorStyle]="{'background-color': '#f0eded', 'width': '10px', 'height': '10px', 'border-radius': '50%', 'margin': '5px'}">
+  <ng-template let-image pTemplate="item">
+    <img [src]="image.src" alt="">
+  </ng-template>
+</p-carousel>
